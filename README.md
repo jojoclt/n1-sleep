@@ -60,3 +60,12 @@
 - Highlight the advantages and unique aspects of your system.
 
 # References
+1. S. Lee, Y. Yu, S. Back, H. Seo, and K. Lee, “Sleepyco: Automatic sleep scoring with feature pyramid and contrastive learning,” arXiv preprint arXiv:2209.09452, 2022.
+2. Van Der Donckt, J. et al. (2022) “Do not sleep on linear models: Simple and interpretable techniques outperform deep learning for sleep scoring,” SSRN Electronic Journal [Preprint]. Available at: https://doi.org/10.2139/ssrn.4170465. 
+3. B Kemp, AH Zwinderman, B Tuk, HAC Kamphuisen, JJL Oberyé. Analysis of a sleep-dependent neuronal feedback loop: the slow-wave microcontinuity of the EEG. IEEE-BME 47(9):1185-1194 (2000).
+https://www.physionet.org/content/sleep-edfx/1.0.0/
+4. Goldberger, A., Amaral, L., Glass, L., Hausdorff, J., Ivanov, P. C., Mark, R., ... & Stanley, H. E. (2000). PhysioBank, PhysioToolkit, and PhysioNet: Components of a new research resource for complex physiologic signals. Circulation [Online]. 101 (23), pp. e215–e220.
+https://www.physionet.org/content/sleep-edfx/1.0.0/
+5. Suni, E. (2023, March 2). Stages of Sleep (Dr. nilong vyas, Ed.). Sleep Foundation. https://www.sleepfoundation.org/stages-of-sleep
+6. Célia Lacaux et al. (2021) “Sleep onset is a creative sweet spot”.Sci. Adv.7, eabj5866. DOI:10.1126/sciadv.abj5866
+7. Meta AI. Sleep Stage Detection on Sleep-EDF. Paperswithcode. https://paperswithcode.com/sota/sleep-stage-detection-on-sleep-edf
