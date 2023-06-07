@@ -1,7 +1,21 @@
 # **Sleep Stage NREM1 Detection Using Machine Learning Models**
 
 # Introduction
-
+- Overview
+    
+    This is a model that can detect the N1 stage of sleep, and it improves the accuracy of the N1 sleep stage by modifying the training dataset.
+    
+- Purpose
+    
+    This model aims to collect labeled data through EEG for the development of a nap-related mobile application.
+    
+- Functionality
+    
+    The function of this model is to detect the N1 sleep stage.
+    
+- Key Features
+    
+    The model we trained performs better in the detection of N1 compared to existing models.
 - Overview
 - Purpose
 - Functionality
