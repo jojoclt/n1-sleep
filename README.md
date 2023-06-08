@@ -23,7 +23,7 @@ The model we trained performs better in the detection of N1 compared to existing
 # Dataset
 
 - Data Description
-    - The dataset we use is the Sleep Casstte Study of ****[Sleep-EDF](https://www.physionet.org/content/sleep-edfx/1.0.0/)** dataset, consisting of 153 files of 20 hours PSGs record. It used a modified Walkman-like cassette-tape recorder to record the data and were manually scored by well-trained technicians according to the Rechtschaffen and Kales manual. The data includes 7 channels (2EEG, 1EOG, 1EMG, Oro-nasal airflow, Rectal body temperature, Event marker). EOG and EEG signals were each sampled at 100 Hz while EMG, Oro-nasal airflow, rectal body temperature and the event marker were sampled at 1Hz.
+    - The dataset we use is the Sleep Casstte Study of **[Sleep-EDF](https://www.physionet.org/content/sleep-edfx/1.0.0/)** dataset, consisting of 153 files of 20 hours PSGs record. It used a modified Walkman-like cassette-tape recorder to record the data and were manually scored by well-trained technicians according to the Rechtschaffen and Kales manual. The data includes 7 channels (2EEG, 1EOG, 1EMG, Oro-nasal airflow, Rectal body temperature, Event marker). EOG and EEG signals were each sampled at 100 Hz while EMG, Oro-nasal airflow, rectal body temperature and the event marker were sampled at 1Hz.
     
 - Quality Evaluation: Justify the reliability and credibility of the data source
     - Survey and analyzing existing literature
@@ -32,9 +32,9 @@ The model we trained performs better in the detection of N1 compared to existing
     - Analyzing the hidden independent component within EEG using ICA with
         - Results:
         
-        ![Untitled](README%207812d2c557c84815ac11699eceea3ee1/Untitled.png)
+        ![Untitled](README%README_img/Untitled.png)
         
-        ![Untitled](README%207812d2c557c84815ac11699eceea3ee1/Untitled%201.png)
+        ![Untitled](README%README_img/Untitled%201.png)
         
         - Due to the limited electrode setup in our EEG data, which only recorded Fpz-Cz and Pz-Oz channels, we simulated their positions as Fz and Pz, respectively. As a result, their ICLabel was categorized as "Other.”
 
@@ -60,11 +60,11 @@ The model we trained performs better in the detection of N1 compared to existing
         
         We referred to the paper titled "Do Not Sleep on Traditional Machine Learning," from which we extracted 131 features from the time-domain and frequency domain.
         
-        ![截圖 2023-06-08 下午4.23.14.png](README%207812d2c557c84815ac11699eceea3ee1/%25E6%2588%25AA%25E5%259C%2596_2023-06-08_%25E4%25B8%258B%25E5%258D%25884.23.14.png)
+        ![截圖 2023-06-08 下午4.23.14.png](README%README_img/%25E6%2588%25AA%25E5%259C%2596_2023-06-08_%25E4%25B8%258B%25E5%258D%25884.23.14.png)
         
         Subsequently, we collected the aforementioned features for different window durations of 30s, 60s, and 90s, and also incorporated features from the previous and following epochs. Therefore, for a single epoch, there would be a total of 1048 features.
         
-        ![截圖 2023-06-07 下午10.53.21.png](README%207812d2c557c84815ac11699eceea3ee1/%25E6%2588%25AA%25E5%259C%2596_2023-06-07_%25E4%25B8%258B%25E5%258D%258810.53.21.png)
+        ![截圖 2023-06-07 下午10.53.21.png](README%README_img/%25E6%2588%25AA%25E5%259C%2596_2023-06-07_%25E4%25B8%258B%25E5%258D%258810.53.21.png)
         
 - Machine Learning Model Utilized
     
