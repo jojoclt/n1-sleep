@@ -32,9 +32,9 @@ The model we trained performs better in the detection of N1 compared to existing
     - Analyzing the hidden independent component within EEG using ICA with
         - Results:
         
-        ![Untitled](README_img/Untitled.png)
+        ![ICLabel_table](README_img/ICLabel_table.png)
         
-        ![Untitled](README_img/Untitled 1.png)
+        ![ICA_component](README_img/ICA_component.png)
         
         - Due to the limited electrode setup in our EEG data, which only recorded Fpz-Cz and Pz-Oz channels, we simulated their positions as Fz and Pz, respectively. As a result, their ICLabel was categorized as "Other.”
 
@@ -60,11 +60,11 @@ The model we trained performs better in the detection of N1 compared to existing
         
         We referred to the paper titled "Do Not Sleep on Traditional Machine Learning," from which we extracted 131 features from the time-domain and frequency domain.
         
-        ![截圖 2023-06-08 下午4.23.14.png](README%README_img/%25E6%2588%25AA%25E5%259C%2596_2023-06-08_%25E4%25B8%258B%25E5%258D%25884.23.14.png)
+        ![features](README_img/features.png)
         
         Subsequently, we collected the aforementioned features for different window durations of 30s, 60s, and 90s, and also incorporated features from the previous and following epochs. Therefore, for a single epoch, there would be a total of 1048 features.
         
-        ![截圖 2023-06-07 下午10.53.21.png](README%README_img/%25E6%2588%25AA%25E5%259C%2596_2023-06-07_%25E4%25B8%258B%25E5%258D%258810.53.21.png)
+        ![windows](README_img/windows.png)
         
 - Machine Learning Model Utilized
     
