@@ -3,7 +3,7 @@
 # **Sleep Stage NREM1 Detection Using Machine Learning Models**
 
 # Demo Video
-<iframe width="966" height="543" src="https://www.youtube.com/embed/Y9VM8ip3Qfg" title="BCI final project" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+https://youtu.be/Y9VM8ip3Qfg
 
 # Introduction
 
