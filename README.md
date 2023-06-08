@@ -80,7 +80,7 @@ The model we trained performs better in the detection of N1 compared to existing
 
 # Validation
 
-- We compare the performance of the original dataset and the preprocessed dataset after applying a linear model in terms of Accuracy, Precision, Recall, and F1-score.
+We compare the performance of the original dataset and the preprocessed dataset after applying a linear model in terms of Accuracy, Precision, Recall, and F1-score.
 Accuracy is a metric that evaluates the overall predictive ability of the model. Precision measures the accuracy of the model in predicting positive instances. Recall measures the model's ability to detect positive instances. F1-score is used to balance the trade-off between Precision and Recall.
 
 # Usage
