@@ -153,6 +153,7 @@ The below tables are the result of our method (clip, clip+bandpass, clip+ASR, cl
 # Conclusion & Future Work
 
 We have trained a model that can distinguish N1 sleep stage more accurately, especially after simplifying the task to N1 versus non-N1 recognition, where the Precision has significantly improved. Therefore, automating the annotation of N1 and non-N1 stages appears to be feasible. However, we still face the challenge of data imbalance. Therefore, in the future, we aim to further address the issue of data imbalance and find ways to mitigate its impact on our analysis.
+In the future, we will continue to try various methods to improve the accuracy of N1 recognition and use this model to label the EEG data we collect ourselves.
 
 # References
 
