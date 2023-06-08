@@ -32,9 +32,9 @@ The model we trained performs better in the detection of N1 compared to existing
     - Analyzing the hidden independent component within EEG using ICA with
         - Results:
         
-        ![Untitled](README%README_img/Untitled.png)
+        ![Untitled](README_img/Untitled.png)
         
-        ![Untitled](README%README_img/Untitled%201.png)
+        ![Untitled](README_img/Untitled 1.png)
         
         - Due to the limited electrode setup in our EEG data, which only recorded Fpz-Cz and Pz-Oz channels, we simulated their positions as Fz and Pz, respectively. As a result, their ICLabel was categorized as "Other.”
 
