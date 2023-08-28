@@ -94,6 +94,7 @@ def clip_edf_data(psg_id, hypnogram_id, read_folder, write_folder):
                 annotation_clip["Onset"] - annotation_clip["Onset"].iloc[0]
             )
             annotation_clips.append(annotation_clip)
+        break
 
     # write EDF files
     N = len(durations)
@@ -130,7 +131,7 @@ def clip_edf_data(psg_id, hypnogram_id, read_folder, write_folder):
         psg_edf = pyedflib.EdfWriter(psg_file, 7, file_type=pyedflib.FILETYPE_EDFPLUS)
         psg_edf.setSignalHeaders(channel_info)
         psg_edf.setStartdatetime(start_times[i])
-        psg_edf.setDatarecordDuration(durations[i].total_seconds())
+        # psg_edf.setDatarecordDuration(100000)
 
         psg_edf.writeSamples(data_list)
         psg_edf.close()
@@ -144,7 +145,7 @@ def clip_edf_data(psg_id, hypnogram_id, read_folder, write_folder):
         )
         hypnogram_edf.setSignalHeaders(channel_info)
         hypnogram_edf.setStartdatetime(start_times[i])
-        hypnogram_edf.setDatarecordDuration(durations[i].total_seconds())
+        # hypnogram_edf.setDatarecordDuration(100000)
 
         for j in range(len(annotation_clips[i])):
             onset = annotation_clips[i]["Onset"].iloc[j]
@@ -163,7 +164,7 @@ def clip_edf_data(psg_id, hypnogram_id, read_folder, write_folder):
 
 read_folder = "./sleep-cassette/"
 write_folder = "./clips/"
-
+os.makedirs(write_folder, exist_ok=True)
 pattern1 = "*-PSG.edf"
 pattern2 = "*-Hypnogram.edf"
 
