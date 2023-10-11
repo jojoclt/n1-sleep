@@ -114,19 +114,28 @@ def get_n1_eeg(signal_df, eeg_index, eog_index):
         pass
     else:
         eog_index = [eog_index]
-        signal_df['N1_predict_EOG'] = signal_df.apply(check_sleep_stage_predict, args=(int(eog_index[0]/100), int(max(eog_index)/100) + 1.5), axis=1) 
-    empty_EEG = signal_df.get('N1_predict_EEG').eq(0).all()
-    empty_EOG = signal_df.get('N1_predict_EOG') & signal_df.get('N1_predict_EOG').eq(0).all()
-    if (not empty_EEG and not empty_EOG):
-        v = signal_df['N1_predict_EEG']&signal_df['N1_predict_EOG']
-        signal_df['N1_predict'] = v
-        # signal_df['N1_predict'] = signal_df.apply(check_sleep_stage_predict, args=(v/100, 0.01), axis=1)
-        if signal_df['N1_predict'].eq(0).all():
+        signal_df['N1_predict_EOG'] = signal_df.apply(check_sleep_stage_predict, args=(int(eog_index[0]/100), int(eog_index[-1]/100) + 1.5), axis=1) 
+    try:
+        not_empty_EEG = (signal_df.get('N1_predict_EEG') != 0).any()
+    except:
+        not_empty_EEG = False
+    try:
+        not_empty_EOG = (signal_df.get('N1_predict_EOG') != 0).any()
+    except:
+        not_empty_EOG = False
+    if (not_empty_EEG & not_empty_EOG):
+        eeg_con = signal_df['N1_predict_EEG'][signal_df['N1_predict_EEG']==int(1)]
+        eog_con = signal_df['N1_predict_EOG'][signal_df['N1_predict_EOG']==int(1)]
+        # cond = eeg_con & eog_con # condition
+        signal_df['N1_predict'] = eeg_con & eog_con
+        length_pred = len(signal_df['N1_predict'][signal_df['N1_predict']==int(1)])
+        # print(length_pred)
+        if length_pred == 0:
             signal_df['N1_predict'] = signal_df['N1_predict_EOG']
-    if not empty_EEG:
-        signal_df['N1_predict'] = signal_df['N1_predict_EEG']
-    elif not empty_EOG:
+    elif not_empty_EOG:
         signal_df['N1_predict'] = signal_df['N1_predict_EOG']
+    elif not_empty_EEG:
+        signal_df['N1_predict'] = signal_df['N1_predict_EEG']
     return signal_df
 
 def lol(signal_df, write_folder, psg_id, save_fig=False):
